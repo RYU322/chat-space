@@ -30,12 +30,12 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true, index: true|
-|mail|string|NUll: false, unique: true|
+|mail|string|null: false, unique: true|
 
 ### Association
-has_many :group_users
-has_many :groups, through: group_users
-has_many :messages
+* has_many :group_users
+* has_many :groups, through: group_users
+* has_many :messages
 
 ## messagesテーブル
 
@@ -44,11 +44,11 @@ has_many :messages
 |body|text|
 |image|string|
 |user_id|integer|null: false, foreign_key: true|
-|group_id||integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
-belongs_to :user
-belongs_to :group
+* belongs_to :user
+* belongs_to :group
 
 ## groupsテーブル
 
@@ -57,9 +57,9 @@ belongs_to :group
 |name|string|null: false, unique: true, index: true|
 
 ### Association
-has_many :group_users
-has_many :users, through: group_users
-has_many :messages
+* has_many :group_users
+* has_many :users, through: group_users
+* has_many :messages
 
 ## groups_usersテーブル
 
@@ -69,5 +69,5 @@ has_many :messages
 |group_id|integer|null: false, foreign_key: true, index: true|
 
 ### Association
-belongs_to :user
-belongs_to :group
+* belongs_to :user
+* belongs_to :group
