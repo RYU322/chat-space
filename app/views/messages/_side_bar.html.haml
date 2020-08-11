@@ -1,0 +1,25 @@
+.ChatSide
+  .SideHeader
+    .SideHeader__list
+      %h3.SideHeader__userName
+        ryu
+      %ul.SideHeader__iconList
+        %li.SideHeader__Icon
+          = link_to '#' do
+            = icon('fas', 'edit')
+        %li.SideHeader__Icon
+          = link_to '#' do
+            = icon('fas', 'cog')
+  .GroupList
+    .Group
+      = link_to '#' do
+        .Group__name
+          techcamp
+        .Group__message
+          まだメッセージはありません
+    .Group
+      = link_to '#' do
+        .Group__name
+          techcamp
+        .Group__message
+          まだメッセージはありません
